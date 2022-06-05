@@ -1,0 +1,32 @@
+.myBG{
+    height: 100vh;
+    background-color:aliceblue;
+    background-size: cover;
+}
+
+.dashboard{
+    height: 70px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.ingfo{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 3px;
+}
+
+.navbg{
+    height: auto;
+    background-color: seagreen;
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: 600;
+    text-shadow: 1.3px 1.3px lightgreen;  
+     
+}
+
