@@ -1,92 +1,122 @@
 const SapiPotongDummy = [
-    {
-      "_id": "629c31f8649d2d63c79cdebd",
-      "index": 0,
-      "age": 5,
-      "gender": "male",
-      "deseaseHistory": "-",
-      "dateofDesease": "-",
-      "cowType": "Sapi Bali"
-    },
-    {
-      "_id": "629c31f87f92c9a805e2eb5e",
-      "index": 1,
-      "age": 5,
-      "gender": "female",
-      "deseaseHistory": "-",
-      "dateofDesease": "-",
-      "cowType": "Sapi Limosin"
-    },
-    {
-      "_id": "629c31f807171b798b0aa721",
-      "index": 2,
-      "age": 7,
-      "gender": "male",
-      "deseaseHistory": "-",
-      "dateofDesease": "-",
-      "cowType": "Sapi Bali"
-    },
-    {
-      "_id": "629c31f8ddbd63e4bb5d2f75",
-      "index": 3,
-      "age": 2,
-      "gender": "male",
-      "deseaseHistory": "-",
-      "dateofDesease": "-",
-      "cowType": "Sapi Bali"
-    },
-    {
-      "_id": "629c31f8d598b19fd7f3aa8c",
-      "index": 4,
-      "age": 6,
-      "gender": "male",
-      "deseaseHistory": "-",
-      "dateofDesease": "-",
-      "cowType": "Sapi Brangus"
-    },
-    {
-      "_id": "629c31f81249fe3c73e94f52",
-      "index": 5,
-      "age": 8,
-      "gender": "female",
-      "deseaseHistory": "-",
-      "dateofDesease": "-",
-      "cowType": "Sapi Limosin"
-    },
-    {
-      "_id": "629c31f81fdc9d1e22a6be42",
-      "index": 6,
-      "age": 8,
-      "gender": "female",
-      "deseaseHistory": "-",
-      "dateofDesease": "-",
-      "cowType": "Sapi Brangus"
-    },
-    {
-      "_id": "629c31f888108cbd2e1273c3",
-      "index": 7,
-      "age": 3,
-      "gender": "female",
-      "deseaseHistory": "-",
-      "dateofDesease": "-",
-      "cowType": "Sapi Limosin"
-    },
-    {
-      "_id": "629c31f8f23a300d7521696f",
-      "index": 8,
-      "age": 7,
-      "gender": "male",
-      "deseaseHistory": "Radang Limpa",
-      "dateofDesease": "1-2-2022",
-      "cowType": "Sapi Brahman"
-    },
-    {
-      "_id": "629c31f86c1470e5a99e1a3e",
-      "index": 9,
-      "age": 5,
-      "gender": "male",
-      "deseaseHistory": "-",
-      "dateofDesease": "-",
-      "cowType": "Sapi Brangus"
-    }
-  ]
+  {
+    "_id": "SPT21",
+    "index": 0,
+    "weight": "578 Kg",
+    "age": 8,
+    "gender": "Betina",
+    "deseaseHistory": "",
+    "dateofDesease": "",
+    "cowType": "Sapi Bali"
+  },
+  {
+    "_id": "SPT88",
+    "index": 1,
+    "weight": "532 Kg",
+    "age": 6,
+    "gender": "Betina",
+    "deseaseHistory": "",
+    "dateofDesease": "",
+    "cowType": "Sapi Bali"
+  },
+  {
+    "_id": "SPT72",
+    "index": 2,
+    "weight": "637 Kg",
+    "age": 3,
+    "gender": "Jantan",
+    "deseaseHistory": "",
+    "dateofDesease": "",
+    "cowType": "Sapi Bali"
+  },
+  {
+    "_id": "SPT84",
+    "index": 3,
+    "weight": "726 Kg",
+    "age": 7,
+    "gender": "Jantan",
+    "deseaseHistory": "",
+    "dateofDesease": "",
+    "cowType": "Sapi Brahman"
+  },
+  {
+    "_id": "SPT63",
+    "index": 4,
+    "weight": "611 Kg",
+    "age": 4,
+    "gender": "Jantan",
+    "deseaseHistory": "",
+    "dateofDesease": "",
+    "cowType": "Sapi Limosin"
+  },
+  {
+    "_id": "SPT19",
+    "index": 5,
+    "weight": "641 Kg",
+    "age": 3,
+    "gender": "Jantan",
+    "deseaseHistory": "",
+    "dateofDesease": "",
+    "cowType": "Sapi Brahman"
+  },
+  {
+    "_id": "SPT80",
+    "index": 6,
+    "weight": "520 Kg",
+    "age": 7,
+    "gender": "Jantan",
+    "deseaseHistory": "",
+    "dateofDesease": "",
+    "cowType": "Sapi Brangus"
+  },
+  {
+    "_id": "SPT83",
+    "index": 7,
+    "weight": "393 Kg",
+    "age": 5,
+    "gender": "Betina",
+    "deseaseHistory": "",
+    "dateofDesease": "",
+    "cowType": "Sapi Brangus"
+  },
+  {
+    "_id": "SPT1",
+    "index": 8,
+    "weight": "741 Kg",
+    "age": 3,
+    "gender": "Betina",
+    "deseaseHistory": "",
+    "dateofDesease": "",
+    "cowType": "Sapi Brangus"
+  },
+  {
+    "_id": "SPT96",
+    "index": 9,
+    "weight": "589 Kg",
+    "age": 6,
+    "gender": "Betina",
+    "deseaseHistory": "",
+    "dateofDesease": "",
+    "cowType": "Sapi Bali"
+  },
+  {
+    "_id": "SPT43",
+    "index": 10,
+    "weight": "403 Kg",
+    "age": 5,
+    "gender": "Jantan",
+    "deseaseHistory": "",
+    "dateofDesease": "",
+    "cowType": "Sapi Brangus"
+  },
+  {
+    "_id": "SPT71",
+    "index": 11,
+    "weight": "521 Kg",
+    "age": 7,
+    "gender": "Betina",
+    "deseaseHistory": "",
+    "dateofDesease": "",
+    "cowType": "Sapi Brangus"
+  }
+]

@@ -1,19 +1,13 @@
 class Sapi {
     constructor() {
         this.id = "";
-        this.jenisKelamin = "";
+        this.spesiesSapi = "";
         this.umur = 0;
         this.berat = 0;
         this.riwayatPenyakit = "";
         this.tanggalSakit = "";
-    }
-    
-    addSapi(id, jenisKelamin, umur, riwayatPenyakit, tanggalSakit) {
-        this.id = id;
-        this.jenisKelamin = jenisKelamin;
-        this.umur = umur;
-        this.riwayatPenyakit = riwayatPenyakit;
-        this.tanggalSakit = tanggalSakit;
+        this.kesehatan = "";
+        this.kondisi = "";
     }
 
     setId(newId) {
@@ -24,12 +18,12 @@ class Sapi {
         return this.id;
     }
 
-    setJenisKelamin(newJenisKelamin) {
-        this.jenisKelamin = newJenisKelamin;
+    setSpesiesSapi(newSpesiesSapi) {
+        this.spesiesSapi = newSpesiesSapi;
     }
 
-    getJenisKelamin() {
-        return this.jenisKelamin;
+    getSpesiesSapi() {
+        return this.spesiesSapi;
     }
 
     setUmur(newUmur) {
@@ -62,6 +56,22 @@ class Sapi {
 
     getTanggalSakit() {
         return this.tanggalSakit;
+    }
+
+    setKesehatan(newKesehatan) {
+        this.kesehatan = newKesehatan;
+    }
+
+    getKesehatan() {
+        return this.kesehatan;
+    }
+
+    setKondisi(newKondisi) {
+        this.kondisi = newKondisi;
+    }
+
+    getKondisi() {
+        return this.kondisi;
     }
 
 }

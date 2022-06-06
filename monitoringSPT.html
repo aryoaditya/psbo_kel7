@@ -23,10 +23,10 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                   <li class="nav-item mx-3">
-                    <a class="nav-link active" aria-current="page" style="font-size: 17px;" href="index.html">Dashboard</a>
+                    <a class="nav-link" style="font-size: 17px;" href="index.html">Dashboard</a>
                   </li>
                   <li class="nav-item mx-3">
-                    <a class="nav-link"  style="font-size: 17px" href="monitoringSPT.html">Monitoring</a>
+                    <a class="nav-link active"  aria-current="page" style="font-size: 17px"  href="monitoringSPT.html">Monitoring</a>
                   </li>
                 </ul>
               </div>
@@ -39,11 +39,42 @@
         align-item-centre">
           <Row>
             <Col>
-              <div class="ingfo"> INFORMATION </div>
+              <div class="ingfo"> MONITORING </div>
             </Col>
           </Row>
         </Container>
     </div>
+
+    <!-- Pagination -->
+    <nav aria-label="...">
+      <ul class="pagination pagination-lg justify-content-center" style="margin-top: 20px;">
+        <li class="page-item active" aria-current="page">
+          <span class="page-link">Sapi Potong</span>
+        </li>
+        <li class="page-item"><a class="page-link" href="monitoringSPR.html">Sapi Perah</a></li>
+      </ul>
+    </nav>
+
+    <!-- Content -->
+    <div class="container" style="margin-top: 30px;">
+        <table class="table">
+            <thead>
+            <tr>
+                <td>ID</td>
+                <td>Jenis Kelamin</td>
+                <td>Spesies Sapi</td>
+                <td>Umur</td>
+                <td>Berat</td>
+                <td>Riwayat Penyakit</td>
+                <td>Kesehatan</td>
+                <td>Kondisi</td>
+            </tr>
+            </thead>
+            <tbody class="table-group-divider" id="tableSapiPotong">
+            </tbody>
+        </table>
+    </div>
+
 
 
 
