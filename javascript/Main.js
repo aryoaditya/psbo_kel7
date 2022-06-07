@@ -1,1 +1,0 @@
-// tiap page mesti pake script yg beda

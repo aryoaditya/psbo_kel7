@@ -1,0 +1,16 @@
+Udah ada 4 Kelas :
+1. MonitoringSPT   : Kelas list sapi potong dan nampilin ke halaman Monitoring
+2. MonitoringSPR   : Kelas list sapi perah dan nampilin ke halaman Monitoring
+3. SapiPerah       : Child dari kelas sapi. Untuk buat objek sapi perah
+4. SapiPotong      : Child dari kelas sapi. Untuk buat objek sapi potong
+
+
+Penjelasan script Javascript :
+1. RunSPT.js        : Menampilkan list sapi potong ke halaman monitoring dengan memanggil method di kelas MonitoringSPT
+2. RunSPR.js        : Menampilkan list sapi perah ke halaman monitoring dengan memanggil method di kelas MonitoringSPR
+3. MonitoringSPT.js : Kelas MonitoringSPT
+4. MonitoringSPR.js : Kelas MonitoringSPR
+5. SapiPerah.js     : Kelas SapiPerah
+6. SapiPotong.js    : Kelas SapiPotong
+7. SapiPotongDummy.js   : Data sapi potong dummy
+8. SapiPerahDummy.js    : Data sapi perah dummy

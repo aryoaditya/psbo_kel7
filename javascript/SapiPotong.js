@@ -4,6 +4,7 @@ class SapiPotong extends Sapi {
         this.jenisKelamin = "";
     }
 
+    // Buat objek sapi
     addSapiPotong(id, jenisKelamin, spesiesSapi, umur, berat, riwayatPenyakit, tanggalSakit) {
         super.id = id;
         super.umur = umur;

@@ -3,6 +3,7 @@ class MonitoringSPT{
         this.listSapiPotong = [];
     }
 
+    // Buat list sapi
     createListSPT(){
         let nSapiPotong = SapiPotongDummy.length;
 
@@ -15,6 +16,7 @@ class MonitoringSPT{
         this.tableSapiPotong(this.listSapiPotong);
     }
 
+    // Tampilin ke halaman monitoring
     tableSapiPotong(data){
         let table = document.getElementById('TableSapiPotong')
         for(let i=0; i<data.length; i++){

@@ -4,6 +4,7 @@ class SapiPerah extends Sapi {
         this.prodSusuHarian = "";
     }
 
+    // Buat objek sapi
     addSapiPerah(id, prodSusuHarian, spesiesSapi, umur, berat, riwayatPenyakit, tanggalSakit) {
         super.id = id;
         super.umur = umur;
@@ -13,7 +14,7 @@ class SapiPerah extends Sapi {
         this.prodSusuHarian = prodSusuHarian;
         super.spesiesSapi = spesiesSapi;
     }
-
+    
     setProdSusuHarian(newProdSusuHarian){
         this.prodSusuHarian = newProdSusuHarian;
     }

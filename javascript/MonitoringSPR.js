@@ -3,6 +3,7 @@ class MonitoringSPR{
         this.listSapiPerah = []
     }
 
+    // Buat list sapi
     createListSPR(){
         let nSapiPerah = SapiPerahDummy.length;
 
@@ -15,6 +16,7 @@ class MonitoringSPR{
         this.tableSapiPerah(this.listSapiPerah);
     }
 
+    // Tampilin ke halaman monitoring
     tableSapiPerah(data){
         let table = document.getElementById('TableSapiPerah')
         for(let i=0; i<data.length; i++){
