@@ -5,14 +5,18 @@ class SapiPotong extends Sapi {
     }
 
     // Buat objek sapi
-    addSapiPotong(id, jenisKelamin, spesiesSapi, umur, berat, riwayatPenyakit, tanggalSakit) {
+    addSapiPotong(id, jenisKelamin, spesiesSapi, umur, berat, riwayatPenyakit, kesehatan) {
         super.id = id;
         super.umur = umur;
         super.berat = berat;
         super.riwayatPenyakit = riwayatPenyakit;
-        super.tanggalSakit = tanggalSakit;
+        super.kesehatan = kesehatan;
         this.jenisKelamin = jenisKelamin;
         super.spesiesSapi = spesiesSapi;
+
+        let kondisi = new Condition();
+        kondisi.setKondisi(umur, kesehatan, berat, jenisKelamin);
+        super.kondisi = kondisi.getKondisi();
     }
 
     setJenisKelamin(newJenisKelamin){
@@ -21,5 +25,10 @@ class SapiPotong extends Sapi {
 
     getJenisKelamin(){
         return this.jenisKelamin;
+    }
+
+    //Override
+    getKondisi(){
+        return this.kondisi;
     }
 }

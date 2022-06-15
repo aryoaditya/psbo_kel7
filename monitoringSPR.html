@@ -10,7 +10,6 @@
 
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    
 </head>
 <body>
     <!-- NAVBAR -->
@@ -57,22 +56,85 @@
 
     <!-- Content -->
     <div class="container" style="margin-top: 30px;">
-        <table class="table">
-            <thead>
-            <tr>
-                <td>ID</td>
-                <td>Spesies Sapi</td>
-                <td>Umur</td>
-                <td>Berat</td>
-                <td>Produksi Susu Harian</td>
-                <td>Riwayat Penyakit</td>
-                <td>Kesehatan</td>
-                <td>Kondisi</td>
-            </tr>
-            </thead>
-            <tbody class="table-group-divider" id="TableSapiPerah">
-            </tbody>
-        </table>
+      <!-- Tombol Add -->
+      <div class="container">
+        <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img class="align-baseline" src="\assets\plus-solid.svg" width="10px"> 
+          <span style="padding: 5px;">
+            Add
+          </span>
+        </button>
+      </div>    
+
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Tambah Sapi Perah</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
+                <div class="mb-1">
+                  <label for="id_sapiPerah" class="col-form-label">ID:</label>
+                  <input type="text" class="form-control" name="id_sapiPerah" id="id_sapiPerah">
+                </div>
+                <div class="mb-1">
+                  <label for="spesies_sapiPerah" class="col-form-label">Spesies Sapi:</label>
+                  <input type="text" class="form-control" name="spesies_sapiPerah" id="spesies_sapiPerah">
+                </div>
+                <div class="d-flex justify-content-between mb-1">
+                  <div class="mb-1">
+                    <label for="umur_sapiPerah" class="col-form-label">Umur:</label>
+                    <input type="number" class="form-control" id="umur_sapiPerah">
+                  </div>
+                  <div class="mb-1">
+                    <label for="berat_sapiPerah" class="col-form-label">Berat (Kg):</label>
+                    <input type="number" class="form-control" id="berat_sapiPerah">
+                  </div>
+                </div>
+                <div class="mb-1">
+                  <label for="prodSusu_sapiPerah" class="col-form-label">Rata-Rata Produksi Susu Harian (L):</label>
+                  <input type="number" class="form-control" id="prodSusu_sapiPerah">
+                </div>
+                <div class="mb-1">
+                  <label for="kesehatan_sapiPerah" class="col-form-label">Kesehatan:</label>
+                  <select id="kesehatan_sapiPerah" class="form-select">
+                    <option value="Sehat">Sehat</option>
+                    <option value="Sedang Sakit">Sedang Sakit</option>
+                  </select>
+                </div>
+                <div class="mb-4">
+                  <label for="riwayatSakit_sapiPerah" class="col-form-label">Riwayat Penyakit:</label>
+                  <input type="text" class="form-control" id="riwayatSakit_sapiPerah">
+                </div>
+                <div class="form-action-buttons d-flex justify-content-end">
+                  <button type="button" class="btn btn-secondary mx-1" data-bs-dismiss="modal">Cancel</button>
+                  <button type="submit" class="btn btn-primary form-action-buttons mx-1" data-bs-dismiss="modal">Submit</button>
+                </div>
+              </form>
+            </div>            
+          </div>
+        </div>
+      </div>
+
+
+      <table class="table">
+        <thead>
+        <tr>
+            <td>ID</td>
+            <td>Spesies Sapi</td>
+            <td>Umur</td>
+            <td>Berat</td>
+            <td>Produksi Susu Harian</td>
+            <td>Riwayat Penyakit</td>
+            <td>Kesehatan</td>
+            <td>Kondisi</td>
+        </tr>
+        </thead>
+        <tbody class="table-group-divider" id="TableSapiPerah">
+        </tbody>
+      </table>
     </div>
 
 
@@ -83,6 +145,7 @@
     <script src="javascript/Sapi.js"></script>
     <script src="javascript/SapiPerah.js"></script>
     <script src="javascript/MonitoringSPR.js"></script>
+    <script src="javascript/Condition.js"></script>
     <script src="javascript/RunSPR.js"></script>
 
     <!-- BOOTSTRAP -->

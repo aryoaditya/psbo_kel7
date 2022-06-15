@@ -57,22 +57,87 @@
 
     <!-- Content -->
     <div class="container" style="margin-top: 30px;">
-        <table class="table">
-            <thead>
-            <tr>
-                <td>ID</td>
-                <td>Jenis Kelamin</td>
-                <td>Spesies Sapi</td>
-                <td>Umur</td>
-                <td>Berat</td>
-                <td>Riwayat Penyakit</td>
-                <td>Kesehatan</td>
-                <td>Kondisi</td>
-            </tr>
-            </thead>
-            <tbody class="table-group-divider" id="TableSapiPotong">
-            </tbody>
-        </table>
+      <!-- Tombol Add -->
+      <div class="container">
+        <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img class="align-baseline" src="\assets\plus-solid.svg" width="10px"> 
+          <span style="padding: 5px;">
+            Add
+          </span>
+        </button>
+      </div>    
+
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Tambah Sapi Potong</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
+                <div class="mb-1">
+                  <label for="id_sapiPotong" class="col-form-label">ID:</label>
+                  <input type="text" class="form-control" name="id_sapiPotong" id="id_sapiPotong">
+                </div>
+                <div class="mb-1">
+                  <label for="jenisKelamin_sapiPotong" class="col-form-label">Jenis Kelamin:</label>
+                  <select id="jenisKelamin_sapiPotong" class="form-select">
+                    <option value="Jantan">Jantan</option>
+                    <option value="Betina">Betina</option>
+                  </select>
+                </div>
+                <div class="mb-1">
+                  <label for="spesies_sapiPotong" class="col-form-label">Spesies Sapi:</label>
+                  <input type="text" class="form-control" name="spesies_sapiPotong" id="spesies_sapiPotong">
+                </div>
+                <div class="d-flex justify-content-between mb-1">
+                  <div class="mb-1">
+                    <label for="umur_sapiPotong" class="col-form-label">Umur:</label>
+                    <input type="number" class="form-control" id="umur_sapiPotong">
+                  </div>
+                  <div class="mb-1">
+                    <label for="berat_sapiPotong" class="col-form-label">Berat (Kg):</label>
+                    <input type="number" class="form-control" id="berat_sapiPotong">
+                  </div>
+                </div>                
+                <div class="mb-1">
+                  <label for="kesehatan_sapiPotong" class="col-form-label">Kesehatan:</label>
+                  <select id="kesehatan_sapiPotong" class="form-select">
+                    <option value="Sehat">Sehat</option>
+                    <option value="Sedang Sakit">Sedang Sakit</option>
+                  </select>
+                </div>
+                <div class="mb-4">
+                  <label for="riwayatSakit_sapiPotong" class="col-form-label">Riwayat Penyakit:</label>
+                  <input type="text" class="form-control" id="riwayatSakit_sapiPotong">
+                </div>
+                <div class="form-action-buttons d-flex justify-content-end">
+                  <button type="button" class="btn btn-secondary mx-1" data-bs-dismiss="modal">Cancel</button>
+                  <button type="submit" class="btn btn-primary form-action-buttons mx-1" data-bs-dismiss="modal">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <table class="table">
+          <thead>
+          <tr>
+              <td>ID</td>
+              <td>Jenis Kelamin</td>
+              <td>Spesies Sapi</td>
+              <td>Umur</td>
+              <td>Berat</td>
+              <td>Riwayat Penyakit</td>
+              <td>Kesehatan</td>
+              <td>Kondisi</td>
+          </tr>
+          </thead>
+          <tbody class="table-group-divider" id="TableSapiPotong">
+          </tbody>
+      </table>
     </div>
 
 
@@ -83,6 +148,7 @@
     <script src="javascript/Sapi.js"></script>
     <script src="javascript/SapiPotong.js"></script>
     <script src="javascript/MonitoringSPT.js"></script>
+    <script src="javascript/Condition.js"></script>
     <script src="javascript/RunSPT.js"></script>
 
     <!-- BOOTSTRAP -->
