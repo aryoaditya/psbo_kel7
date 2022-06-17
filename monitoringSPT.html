@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/logoo.png">
     <title>Monitoring Peternakan Sapi</title>
     <!-- CSS -->
     <link rel="stylesheet" href="/style/homepage.css">
@@ -59,14 +60,14 @@
     <div class="container" style="margin-top: 30px;">
       <!-- Tombol Add -->
       <div class="container">
-        <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img class="align-baseline" src="\assets\plus-solid.svg" width="10px"> 
+        <button type="button" class="btn btn-success float-end" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img class="align-baseline" src="\assets\plus-solid.svg" width="10px"> 
           <span style="padding: 5px;">
             Add
           </span>
         </button>
       </div>    
 
-      <!-- Modal -->
+      <!-- Modal Add -->
       <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -78,7 +79,7 @@
               <form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
                 <div class="mb-1">
                   <label for="id_sapiPotong" class="col-form-label">ID:</label>
-                  <input type="text" class="form-control" name="id_sapiPotong" id="id_sapiPotong">
+                  <input type="text" class="form-control" name="id_sapiPotong" id="id_sapiPotong" required>
                 </div>
                 <div class="mb-1">
                   <label for="jenisKelamin_sapiPotong" class="col-form-label">Jenis Kelamin:</label>
@@ -89,16 +90,16 @@
                 </div>
                 <div class="mb-1">
                   <label for="spesies_sapiPotong" class="col-form-label">Spesies Sapi:</label>
-                  <input type="text" class="form-control" name="spesies_sapiPotong" id="spesies_sapiPotong">
+                  <input type="text" class="form-control" name="spesies_sapiPotong" id="spesies_sapiPotong" required>
                 </div>
                 <div class="d-flex justify-content-between mb-1">
                   <div class="mb-1">
                     <label for="umur_sapiPotong" class="col-form-label">Umur:</label>
-                    <input type="number" class="form-control" id="umur_sapiPotong">
+                    <input type="number" class="form-control" id="umur_sapiPotong" required>
                   </div>
                   <div class="mb-1">
                     <label for="berat_sapiPotong" class="col-form-label">Berat (Kg):</label>
-                    <input type="number" class="form-control" id="berat_sapiPotong">
+                    <input type="number" class="form-control" id="berat_sapiPotong" required>
                   </div>
                 </div>                
                 <div class="mb-1">
@@ -111,6 +112,51 @@
                 <div class="mb-4">
                   <label for="riwayatSakit_sapiPotong" class="col-form-label">Riwayat Penyakit:</label>
                   <input type="text" class="form-control" id="riwayatSakit_sapiPotong">
+                </div>
+                <div class="form-action-buttons d-flex justify-content-end">
+                  <button type="button" class="btn btn-secondary mx-1" data-bs-dismiss="modal">Cancel</button>
+                  <button type="submit" class="btn btn-primary form-action-buttons mx-1" data-bs-dismiss="modal">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Edit -->
+      <div class="modal fade" id="edit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Edit Sapi Potong</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form onsubmit="event.preventDefault(); onFormEdit();" autocomplete="off">
+                <div class="mb-1">
+                  <label for="id_sapiPotongEdit" class="col-form-label">ID:</label>
+                  <input type="text" class="form-control" name="id_sapiPotongEdit" id="id_sapiPotongEdit" disabled="disabled">
+                </div>
+                <div class="d-flex justify-content-between mb-1">
+                  <div class="mb-1">
+                    <label for="umur_sapiPotongEdit" class="col-form-label">Umur:</label>
+                    <input type="number" class="form-control" id="umur_sapiPotongEdit">
+                  </div>
+                  <div class="mb-1">
+                    <label for="berat_sapiPotongEdit" class="col-form-label">Berat (Kg):</label>
+                    <input type="number" class="form-control" id="berat_sapiPotongEdit">
+                  </div>
+                </div>                
+                <div class="mb-1">
+                  <label for="kesehatan_sapiPotongEdit" class="col-form-label">Kesehatan:</label>
+                  <select id="kesehatan_sapiPotongEdit" class="form-select">
+                    <option value="Sehat">Sehat</option>
+                    <option value="Sedang Sakit">Sedang Sakit</option>
+                  </select>
+                </div>
+                <div class="mb-4">
+                  <label for="riwayatSakit_sapiPotongEdit" class="col-form-label">Riwayat Penyakit:</label>
+                  <input type="text" class="form-control" id="riwayatSakit_sapiPotongEdit">
                 </div>
                 <div class="form-action-buttons d-flex justify-content-end">
                   <button type="button" class="btn btn-secondary mx-1" data-bs-dismiss="modal">Cancel</button>

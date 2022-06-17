@@ -36,4 +36,10 @@ class SapiPerah extends Sapi {
     getKondisi(){
         return this.kondisi;
     }
+    
+    setKondisi(){
+        let kondisi = new Condition();
+        kondisi.setKondisi(this.umur, this.kesehatan);
+        this.kondisi = kondisi.getKondisi();
+    }
 }

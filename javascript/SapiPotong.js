@@ -31,4 +31,10 @@ class SapiPotong extends Sapi {
     getKondisi(){
         return this.kondisi;
     }
+
+    setKondisi(){
+        let kondisi = new Condition();
+        kondisi.setKondisi(this.umur, this.kesehatan, this.berat, this.jenisKelamin);
+        this.kondisi = kondisi.getKondisi();
+    }
 }

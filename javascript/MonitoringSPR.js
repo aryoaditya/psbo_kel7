@@ -15,12 +15,13 @@ class MonitoringSPR{
         this.tableSapiPerah(this.listSapiPerah);
     }
 
+    // tambah list sapi baru
     addList(id, prodSusu, spesies, umur, berat, riwayatSakit, kesehatan){
         let n = this.listSapiPerah.length;
 
-        this.listSapiPerah[n-1] = new SapiPerah();
-        this.listSapiPerah[n-1].addSapiPerah(id, prodSusu, spesies, umur, berat, riwayatSakit, kesehatan);
-        this.addRow(this.listSapiPerah[n-1]);
+        this.listSapiPerah[n] = new SapiPerah();
+        this.listSapiPerah[n].addSapiPerah(id, prodSusu, spesies, umur, berat, riwayatSakit, kesehatan);
+        this.addRow(this.listSapiPerah[n], n);
     }
 
     // Tampilin ke halaman monitoring
@@ -36,12 +37,18 @@ class MonitoringSPR{
                         <td>${data[i].getRiwayatPenyakit()}</td>
                         <td>${data[i].getKesehatan()}</td>
                         <td>${data[i].getKondisi()}</td>
+                        <td> <button onClick="onEdit(${i})" type="button" class="btn btn-warning mx-1" data-bs-toggle="modal" data-bs-target="#edit">
+                                <span style="padding: 2px;">
+                                Edit
+                                </span>
+                            </button> </td>
                     </tr>`
             table.innerHTML += row;
         }
     }
 
-    addRow(data){
+    // tampilin sapi baru ke halaman monitoring
+    addRow(data, i){
         let table = document.getElementById('TableSapiPerah');
 
         let row = `<tr>
@@ -53,7 +60,41 @@ class MonitoringSPR{
                         <td>${data.getRiwayatPenyakit()}</td>
                         <td>${data.getKesehatan()}</td>
                         <td>${data.getKondisi()}</td>
+                        <td> <button onClick="onEdit(${i})" type="button" class="btn btn-warning mx-1" data-bs-toggle="modal" data-bs-target="#edit">
+                                <span style="padding: 2px;">
+                                Edit
+                                </span>
+                            </button></td>
                     </tr>`
         table.innerHTML += row;
+    }
+    
+    getListSPR(){
+        return this.listSapiPerah;
+    }
+
+    // update tampilan halaman monitoring sapi perah setelah diedit
+    updateSapi(data, idx){
+        let table = document.getElementById('TableSapiPerah')
+        table.innerHTML = "";
+        data[idx].setKondisi();
+        for(let i=0; i<data.length; i++){
+            let row = `<tr>
+                            <td>${data[i].getId()}</td>
+                            <td>${data[i].getSpesiesSapi()}</td>
+                            <td>${data[i].getUmur()}</td>
+                            <td>${data[i].getBerat()} Kg</td>
+                            <td>${data[i].getProdSusuHarian()} L</td>
+                            <td>${data[i].getRiwayatPenyakit()}</td>
+                            <td>${data[i].getKesehatan()}</td>
+                            <td>${data[i].getKondisi()}</td>
+                        <td> <button onClick="onEdit(${i})" type="button" class="btn btn-warning mx-1" data-bs-toggle="modal" data-bs-target="#edit">
+                                <span style="padding: 2px;">
+                                Edit
+                                </span>
+                            </button> </td>
+                    </tr>`
+            table.innerHTML += row;
+        }
     }
 }
