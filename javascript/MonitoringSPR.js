@@ -12,7 +12,6 @@ class MonitoringSPR{
             this.listSapiPerah[i] = new SapiPerah();
             this.listSapiPerah[i].addSapiPerah(s._id, s.milkProdDay, s.cowType, s.age, s.weight, s.deseaseHistory, s.health);    
         }
-        this.tableSapiPerah(this.listSapiPerah);
     }
 
     // tambah list sapi baru
@@ -71,6 +70,16 @@ class MonitoringSPR{
     
     getListSPR(){
         return this.listSapiPerah;
+    }
+
+    cekSiapPerah(){
+        let n = 0;
+        for(let i=0; i<this.listSapiPerah.length;i++){
+            if(this.listSapiPerah[i].getKondisi() == "Siap Perah"){
+                n += 1;
+            }
+        }
+        return n;
     }
 
     // update tampilan halaman monitoring sapi perah setelah diedit

@@ -12,8 +12,6 @@ class MonitoringSPT{
             this.listSapiPotong[i] = new SapiPotong();
             this.listSapiPotong[i].addSapiPotong(s._id, s.gender, s.cowType, s.age, s.weight, s.deseaseHistory, s.health);    
         }
-        
-        this.tableSapiPotong(this.listSapiPotong);
     }
 
     // tambah list dari form baru
@@ -71,6 +69,16 @@ class MonitoringSPT{
 
     getListSPT(){
         return this.listSapiPotong;
+    }
+
+    cekSiapPotong(){
+        let n = 0;
+        for(let i=0; i<this.listSapiPotong.length;i++){
+            if(this.listSapiPotong[i].getKondisi() == "Siap Potong"){
+                n += 1;
+            }
+        }
+        return n;
     }
 
     // update tampilan halaman monitoring sapi potong setelah diedit

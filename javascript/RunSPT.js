@@ -2,6 +2,7 @@
 // dengan memanggil method di kelas MonitoringSPT
 let monitoringSPT = new MonitoringSPT();
 monitoringSPT.createListSPT();
+monitoringSPT.tableSapiPotong(monitoringSPT.listSapiPotong);
 
 // fungsi trigger submit form add sapi
 function onFormSubmit(){

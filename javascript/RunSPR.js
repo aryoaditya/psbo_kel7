@@ -2,6 +2,7 @@
 // dengan memanggil method di kelas MonitoringSPR
 let monitoringSPR = new MonitoringSPR();
 monitoringSPR.createListSPR();
+monitoringSPR.tableSapiPerah(monitoringSPR.listSapiPerah);
 
 // fungsi trigger submit form add sapi
 function onFormSubmit(){
