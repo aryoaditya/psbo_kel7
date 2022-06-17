@@ -29,6 +29,7 @@ class Information{
         return this.jumlahSapiSiapPtg;
     }
 
+    // Menampilkan informasi jumlah sapi
     getInformation(){
         let jumlahSPT = document.getElementById('jumlahSapiPotong');
         let jumlahSPR = document.getElementById('jumlahSapiPerah');

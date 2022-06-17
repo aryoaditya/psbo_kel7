@@ -71,6 +71,7 @@ class MonitoringSPT{
         return this.listSapiPotong;
     }
 
+    // Cek jumlah sapi potong untuk ditampilkan ke halaman informasi
     cekSiapPotong(){
         let n = 0;
         for(let i=0; i<this.listSapiPotong.length;i++){

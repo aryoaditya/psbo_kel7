@@ -72,6 +72,7 @@ class MonitoringSPR{
         return this.listSapiPerah;
     }
 
+    // Cek jumlah sapi potong untuk ditampilkan ke halaman informasi
     cekSiapPerah(){
         let n = 0;
         for(let i=0; i<this.listSapiPerah.length;i++){
