@@ -17,12 +17,13 @@ Programming Language	: Javascript <br>
 Framework			: -
 
 # User Scenario
-User akan memonitoring ternak sapinya dengan sebuah aplikasi yang dapat memasukkan informasi sapi yang berisikan id, kelamin, berat, penyakit, dan umur. Sapi tersebut akan dibagikan menjadi 2 jenis yaitu sapi perah dan sapi potong. Sapi perah memiliki informasi tambahan yaitu liter hasil susu yang dihasilkan perharinya sedangkan untuk sapi potong memiliki informasi tambahan yaitu tanggal masuk dan tanggal keluar. Lalu ada class “kesehatan” dari sapi tersebut yang akan dilihat dari riwayat penyakit yang dimasukkan oleh user. Terdapat 3 variabel yang diambil dari kesehatannya yaitu Sehat (jika sapi tersebut tidak memiliki riwayat penyakit), sedang sakit (jika sapi tersebut memiliki penyakit yang sedang diderita), dan pernah sakit (jika sapi tersebut pernah memiliki riwayat penyakit). Lalu ada class “kondisi” yang mana itu dilihat dari informasi kesehatan, umur, dan berat. Ada 2 variabel dari class “kondisi” yaitu siap (jika kesehatan, umur, dan berat mencukupi) dan tidak siap (jika kesehatan, umur, dan berat tidak mencukupi).
+User akan memonitoring ternak sapinya dengan sebuah aplikasi yang dapat memasukkan informasi sapi yang berisikan id, spesies, umur, berat, riwayat penyakit, kesehatan, dan kondisi kesiapan produksi. Sapi tersebut akan dibagi menjadi 2 jenis yaitu sapi perah dan sapi potong. Sapi perah memiliki informasi tambahan yaitu liter hasil susu yang dihasilkan perharinya sedangkan untuk sapi potong memiliki informasi tambahan yaitu jenis kelamin. Lalu ada class "Condition" dari sapi tersebut yang akan dilihat dari kriteria sapi siap dipotong atau diperah. Kriteria untuk sapi siap dipotong adalah berdasarkan umur, berat, jenis kelamin, dan kesehatan. Sedangkan kriteria untuk sapi siap diperah adalah berdasarkan umur dan kesehatan. 
 
 # Fitur	
 - Informasi sapi (id, berat, kelamin, umur, dan riwayat penyakit)
 - Jenis sapi (perah dan potong)
-- Kesehatan
-- Kondisi
+- Kondisi kesiapan produksi ternak
+- Menambah objek sapi
+- Mengubah value atribut sapi
 
 # Use case Diagram

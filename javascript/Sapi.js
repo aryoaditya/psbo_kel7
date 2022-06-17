@@ -5,7 +5,6 @@ class Sapi {
         this.umur = 0;
         this.berat = 0;
         this.riwayatPenyakit = "";
-        this.tanggalSakit = "";
         this.kesehatan = "";
         this.kondisi = "";
     }
