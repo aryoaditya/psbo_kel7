@@ -25,5 +25,3 @@ User akan memonitoring ternak sapinya dengan sebuah aplikasi yang dapat memasukk
 - Kondisi kesiapan produksi ternak
 - Menambah objek sapi
 - Mengubah value atribut sapi
-
-# Use case Diagram
